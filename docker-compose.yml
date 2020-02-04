@@ -1,0 +1,11 @@
+version: "3.0"
+services: 
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        ports: 
+            - "3000:3000"
+        volumes: 
+            - /usr/reactProject/frontend/node_modules
+            - .:/usr/reactProject/frontend
