@@ -6,4 +6,4 @@ COPY . .
 RUN npm run build
 
 FROM nginx
-COPY --from=builder /usr/reactProject/frontend /usr/share/nginx/html
+COPY --from=builder /usr/reactProject/frontend/build /usr/share/nginx/html
